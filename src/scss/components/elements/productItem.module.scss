@@ -1,0 +1,158 @@
+@import '../../variables.scss';
+
+.item{
+    width: 19%;
+    margin: 0 .5%;
+    margin-bottom: 40px !important;
+
+    @media screen and (max-width: 1100px){
+        width: 24%;
+    }
+
+    @media screen and (max-width: 800px){
+        width: 49% !important;
+        margin: 0%;
+        margin-bottom: 40px !important;
+    }
+
+    @media screen and (max-width: 550px){
+        width: 100% !important;
+
+        &_image{
+            height: 350px;
+        }
+    }
+
+    &_btn{
+        background: $app-color !important;
+        pointer-events: none;
+    }
+
+    &_alt{
+        width: 32% !important;
+
+        .item_image{
+            height: 400px;
+
+            span{
+                right: -45px;
+                padding: 10px;
+                font-size: 25px;
+            }
+
+            span:nth-child(2){
+                top: 70px;
+            }
+        }
+    }
+
+    &_image{
+        width: 100%;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+
+        &::before{
+            content: '';
+            transition: .3s;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        @media screen and (max-width: 800px){
+            span{
+                right: 20px !important;
+            }
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        span{
+            position: absolute;
+            background: #292929;
+            right: -30px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 5px;
+            transition: .3s;
+            font-size: 20px;
+            top: 15px;
+            border-radius: 5px;
+
+            & svg{
+                transition: .3s;
+            }
+
+            &:hover svg{
+                transform: scale(1.1);
+            }
+        }
+
+        span:nth-child(2){
+            top: 55px;
+        }
+    }
+
+    &:hover &_image span{
+        right: 15px;
+    }
+
+    &:hover &_image::before{
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    &_body{
+        margin-top: 15px;
+
+        h3{
+            margin: 0px;
+            font-size: 23px;
+            font-weight: 300;   
+            height: 65px;
+            overflow: hidden;
+            line-height: 1.5;
+            color: white;
+        }
+
+        a{
+            width: 100%;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            padding: 15px 0;
+            color: white;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: .3s;
+            border: none;
+            border: 1px solid white;
+        }
+
+        &_span{
+            color: $app-color;
+            display: flex;
+            position: relative;
+            align-items: center;
+            font-size: 27px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+    }
+
+    &:hover &_body a{   
+        background: $app-color;
+        font-weight: bold;
+        border: 1px solid $app-color;
+        color: #292929;
+    }
+}

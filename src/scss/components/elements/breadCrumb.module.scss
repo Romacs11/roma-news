@@ -1,0 +1,44 @@
+.bread{
+    margin-top: 30px;
+    overflow: hidden;
+
+    a{
+        margin-right: 6px;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        transition: .3s;
+
+        @media screen and (max-width: 600px){
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 450px){
+            font-size: 17px;
+        }
+
+        span{
+            margin-left: 6px;
+        }
+
+        &:hover{
+            color: yellow;
+        }
+        
+        &:hover span{
+            color: white;
+        }
+
+    }
+
+    &Active{
+        pointer-events: none;
+        text-decoration: none;
+
+        a{
+            color: yellow;
+        }
+    }
+
+}

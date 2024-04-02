@@ -1,0 +1,21 @@
+.carousel_container{
+    width: 100%;
+    height: 400px;
+
+    @media screen and (max-width: 800px){
+        height: 370px;
+    }
+
+    &_child{
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: 100%;
+            transition: .3s;
+            object-fit: cover;
+        }
+    }
+}

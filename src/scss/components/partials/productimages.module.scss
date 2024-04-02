@@ -1,0 +1,54 @@
+.pics{
+    width: 11%;
+
+    @media screen and (max-width: 1050px){
+        width: 23%;
+    }
+
+    @media screen and (max-width: 600px){
+        width: 100%;
+        order: 2;
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+
+        img{
+            width: 20% !important;
+            height: 100px !important;
+            margin: 0 10px;
+            border-radius: 50%;
+        }
+    }
+
+    @media screen and (max-width: 520px){
+        img{
+            width: 25% !important;
+        }
+    }
+
+    @media screen and (max-width: 420px){
+        img{
+            width: 20% !important;
+            height: 80px !important;
+        }
+    }
+
+    @media screen and (max-width: 400px){
+        img{
+            width: 25% !important;
+        }
+    }
+
+    &_active{
+        box-shadow: 0px 0px 2px 2px yellow;
+    }
+
+    img{
+        width: 100%;
+        cursor: pointer;
+        height: 160.5px;
+        object-fit: cover;
+        margin-bottom: 5px;
+    }
+    
+}

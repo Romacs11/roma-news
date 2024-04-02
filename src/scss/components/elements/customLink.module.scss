@@ -1,0 +1,37 @@
+@import '../../variables.scss';
+
+.nav_child_active{
+    &::before{
+        height: 100% !important;
+    }
+    
+    span{
+        color:#292929 !important;
+
+        svg{
+            color:#292929 !important;
+        }
+    }
+
+    button{
+        color:$app-color;
+        background: #292929;
+    }
+    
+    @media screen and (max-width: 1050px){
+        background: yellow;
+        transition: .3s;
+        border-bottom: 1px solid yellow !important;
+    }
+}
+
+.footer_child_active{
+    &::before{
+        left: 0% !important;
+        width: 100% !important;
+    }
+
+    &{
+        color: $app-color !important;
+    }
+}

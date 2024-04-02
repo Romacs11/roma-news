@@ -1,0 +1,41 @@
+@import '../variables.scss';
+
+.account{
+    margin-top: 30px;
+
+    @media screen and(max-width: 650px){
+        h1{
+            font-size: 35px !important;
+        }
+    }
+
+    h1{
+        color: white;
+        font-size: 40px;
+        margin: 0;
+        text-align: center;
+    }
+
+    div{
+
+        h3{
+            color: white;
+
+            span{
+                color: yellow;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &_btn{
+        background:  $app-color;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        color: white;
+        font-weight: 500;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+}
