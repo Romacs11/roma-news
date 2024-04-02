@@ -34,7 +34,7 @@ const MasterLayout = () => {
         }
     }, []);
 
-    return (
+    return ( 
         <section className={cls.root}>
             <NavigationDefault />
             <NavigationMobile />
